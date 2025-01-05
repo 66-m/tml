@@ -3,3 +3,31 @@ and save teeworlds map files without using the original Teeworlds client.
 
 The documentation can be found in "docs", change into this directory, execute
 "make html" and open docs/_build/html/index.html
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/66-m/tml.git
+cd tml
+```
+
+2. Install the package:
+
+   - For development (editable mode):
+     ```bash
+     pip install -e .
+     ```
+
+   - For production (non-editable mode):
+     ```bash
+     pip install .
+     ```
+
+## Usage
+
+After installation, you can run the examples found in the `/examples` directory to get started - for instance:
+```bash
+python examples/extract_images.py
+```
+

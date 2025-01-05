@@ -3,7 +3,7 @@ import os
 from tml.tml import Teemap
 from tml.constants import TML_DIR, TILEINDEX
 
-map_path = os.sep.join([TML_DIR, '/maps/dm1'])
+map_path = os.path.join(TML_DIR, 'maps', 'dm1')
 t = Teemap(map_path)
 pickups = {
     'shotgun': 0,
@@ -18,9 +18,9 @@ pickups = {
     # 'nohook': 0,
 }
 for tile in t.gamelayer.tiles:
-    for key, value in pickups.iteritems():
+    for key, value in pickups.items():
         if tile.index == TILEINDEX[key]:
             pickups[key] += 1
 
-for k, v in pickups.iteritems():
-    print '{value:3}x {key}'.format(value=v, key=k)
+for k, v in pickups.items():
+    print('{value:3}x {key}'.format(value=v, key=k))
